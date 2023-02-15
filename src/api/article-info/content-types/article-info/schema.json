@@ -4,7 +4,8 @@
   "info": {
     "singularName": "article-info",
     "pluralName": "article-infos",
-    "displayName": "articleInfo"
+    "displayName": "articleInfo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,9 +13,6 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "author": {
       "type": "string"
     },
     "description": {
@@ -25,6 +23,12 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
     }
   }
 }
